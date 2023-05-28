@@ -2,7 +2,7 @@
 
 This repo contains the code for our paper: 
 
-Yifan Peng, Yui Sudo, Muhammad Shakeel, and Shinji Watanabe, “DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models,” in Proc. INTERSPEECH, 2023. (to appear)
+Yifan Peng, Yui Sudo, Shakeel Muhammad, and Shinji Watanabe, “DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models,” in Proc. INTERSPEECH, 2023. (to appear)
 
 ## Overview
 
@@ -13,7 +13,7 @@ DPHuBERT is a task-agnostic compression method based on joint distillation and s
 ```
 @inproceedings{dphubert,
     title={{DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models}},
-    author={Yifan Peng and Yui Sudo and Muhammad Shakeel and Shinji Watanabe},
+    author={Yifan Peng and Yui Sudo and Shakeel Muhammad and Shinji Watanabe},
     booktitle={Proceedings of the 24th Annual Conference of the International Speech Communication Association (INTERSPEECH)},
     year={2023},
 }
