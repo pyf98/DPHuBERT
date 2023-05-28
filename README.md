@@ -1,8 +1,9 @@
 # DPHuBERT
 
-This repo contains the code for our paper: 
+This repo contains the code and models for our paper: 
 
 Yifan Peng, Yui Sudo, Shakeel Muhammad, and Shinji Watanabe, “DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models,” in Proc. INTERSPEECH, 2023. (to appear)
+
 
 ## Overview
 
@@ -18,3 +19,10 @@ DPHuBERT is a task-agnostic compression method based on joint distillation and s
     year={2023},
 }
 ```
+
+## Acknowledgments
+
+We thank the authors of the following projects for open-sourcing their code:
+- [TorchAudio](https://github.com/pytorch/audio): Our speech SSL models and training pipelines are based on TorchAudio's implementation.
+- [FLOP](https://github.com/asappresearch/flop): Our implementation of the Hard Concrete Distribution is modified from FLOP.
+- [CoFiPruning](https://github.com/princeton-nlp/CoFiPruning): Some of our training hyper-parameters are inspired by CoFiPruning.
