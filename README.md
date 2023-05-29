@@ -79,7 +79,15 @@ sbatch run.sh
 After training, the compressed model parameters and configurations will be saved in the corresponding experiment directory. We can easily load a compressed model as follows:
 
 ```python
+import torch
+from wav2vec2.model import wav2vec2_model
 
+ckpt_path = "path/to/ckpt"
+ckpt = torch.load(ckpt_path)
+model = wav2vec2_model(**ckpt["config"])
+result = model.load_state_dict(ckpt["state_dict"], strict=False)
+print(f"missing: {result.missing_keys}, unexpected: {result.unexpected_keys}")
+print(f"{sum(p.numel() for p in model.parameters())} params")
 ```
 
 
@@ -87,6 +95,10 @@ After training, the compressed model parameters and configurations will be saved
 
 We also provide some pre-trained models.
 
+| Name | Teacher | Sparsity | Params | Link |
+|:---:|:---:|:---:|:---:|:---:|
+| DPHuBERT | HuBERT Base | 0.75 | 23,585,946 | https://huggingface.co/pyf98/DPHuBERT/blob/main/DPHuBERT-sp0.75.pth |
+| DPWavLM | WavLM Base+ | 0.75 | 23,586,325 | https://huggingface.co/pyf98/DPHuBERT/blob/main/DPWavLM-sp0.75.pth |
 
 
 
