@@ -7,11 +7,16 @@ Yifan Peng, Yui Sudo, Shakeel Muhammad, and Shinji Watanabe, “DPHuBERT: Joint 
 
 ## Overview
 
-DPHuBERT is a task-agnostic compression method based on **joint distillation and structured pruning**. DPHuBERT outperforms pure distillation methods in most [SUPERB](https://superbbenchmark.org/leaderboard) tasks. Comprehensive analyses are presented to investigate its performance with less training data or at various sparsity ratios. Our method can be directly applied to various speech SSL models like HuBERT (eithr Base or Large) and WavLM while being efficient and effective.
+DPHuBERT is a task-agnostic compression method based on **joint distillation and structured pruning**. DPHuBERT outperforms pure distillation methods in most [SUPERB](https://superbbenchmark.org/leaderboard) tasks. It also performs well with limited training data. Our method can be directly applied to various speech SSL models like HuBERT (eithr Base or Large) and WavLM.
 
 The training procedure is illustrated in the figure below:
 
 ![Training procedure of DPHuBERT](imgs/dphubert-train.png)
+
+The main results are summarized in this table:
+
+![DPHuBERT results](imgs/dphubert-results.png)
+
 
 ## Requirements
 
@@ -30,7 +35,9 @@ transformers=4.24.0
 ```
 
 
-## Train DPHuBERT
+## Usage
+
+Please follow these steps to train DPHuBERT.
 
 ### 1. Download and prepare audio data
 
@@ -74,6 +81,13 @@ After training, the compressed model parameters and configurations will be saved
 ```python
 
 ```
+
+
+## Pre-trained models
+
+We also provide some pre-trained models.
+
+
 
 
 ## Citation
