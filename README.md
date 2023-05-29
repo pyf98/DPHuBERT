@@ -7,10 +7,24 @@ Yifan Peng, Yui Sudo, Shakeel Muhammad, and Shinji Watanabe, “DPHuBERT: Joint 
 
 ## Overview
 
-DPHuBERT is a task-agnostic compression method based on joint distillation and structured pruning. DPHuBERT outperforms previous distillation methods in most tasks of SUPERB. Comprehensive analyses are presented to investigate its performance with less training data or at various sparsity ratios. In addition to HuBERT Base, our method can be directly applied to other speech SSL models such as WavLM and HuBERT Large while still being efficient and effective.
+DPHuBERT is a task-agnostic compression method based on **joint distillation and structured pruning**. DPHuBERT outperforms pure distillation methods in most SUPERB tasks. Comprehensive analyses are presented to investigate its performance with less training data or at various sparsity ratios. Our method can be directly applied to various speech SSL models like HuBERT (eithr Base or Large) and WavLM while being efficient and effective.
 
 
 ## Requirements
+
+Our code is based on PyTorch, TorchAudio, and PyTorch Lightning. Please install these required packages from their official sources. The latest versions should work. We include our versions below for reference.
+
+```
+# Main packages for training
+pytorch=1.13.1
+cuda=11.6.2
+pytorch-lightning=1.8.1
+torchaudio=0.13.1
+
+# Other packages for obtaining pre-trained SSL
+fairseq=0.12.2
+transformers=4.24.0
+```
 
 
 ## Train DPHuBERT
@@ -44,7 +58,20 @@ python convert_hubert_from_hf.py
 
 The converted checkpoint will be saved as `pretrained/hubert-base-ls960.hf.pth`. The output path can be changed in the python script.
 
-### 3. 
+### 3. Start training
+
+After preparing data and pre-trained model, we can start training by sequentially executing the four python scripts: `distill.py`, `prune.py`, `final_distill.py`, and `save_final_ckpt.py`. We provide a shell script `run.sh` to better record the hyper-parameters. By default, we request 4 NVIDIA A100 (40GB) GPUs via the SLURM job scheduler. It takes around 6 hours to compress HuBERT Base. Please modify the hyper-parameters if the environment is different. For example, one can reduce the number of GPUs but enable gradient accumulation to keep the total batch size in a similar range.
+
+```bash
+sbatch run.sh
+```
+
+After training, the compressed model parameters and configurations will be saved in the corresponding experiment directory. We can easily load a compressed model as follows:
+
+```python
+
+```
+
 
 ## Citation
 
@@ -64,5 +91,9 @@ Please cite our paper if you use DPHuBERT.
 
 We thank the authors of the following projects for open-sourcing their code:
 - [TorchAudio](https://github.com/pytorch/audio): Our speech SSL models and training pipelines are based on TorchAudio.
-- [FLOP](https://github.com/asappresearch/flop): Our implementation of the Hard Concrete Distribution is modified from FLOP.
+- [FLOP](https://github.com/asappresearch/flop): Our implementation of the Hard Concrete Distribution is from FLOP.
 - [CoFiPruning](https://github.com/princeton-nlp/CoFiPruning): Some of our training hyper-parameters follow CoFiPruning.
+
+Our method is inspired by prior studies:
+- Distillation: [DistilHuBERT](https://arxiv.org/abs/2110.01900), [FitHuBERT](https://arxiv.org/abs/2207.00555), [Deep versus Wide](https://arxiv.org/abs/2207.06867)
+- Pruning: [FLOP](https://arxiv.org/abs/1910.04732), [CoFiPruning](https://arxiv.org/abs/2204.00408), [HJ-Pruning](https://arxiv.org/abs/2302.14132)
