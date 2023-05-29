@@ -97,8 +97,8 @@ We also provide some pre-trained models.
 
 | Name | Teacher | Sparsity | Params | Link |
 |:---:|:---:|:---:|:---:|:---:|
-| DPHuBERT | HuBERT Base | 0.75 | 23,585,946 | https://huggingface.co/pyf98/DPHuBERT/blob/main/DPHuBERT-sp0.75.pth |
-| DPWavLM | WavLM Base+ | 0.75 | 23,586,325 | https://huggingface.co/pyf98/DPHuBERT/blob/main/DPWavLM-sp0.75.pth |
+| DPHuBERT | HuBERT Base | 0.75 | 23,585,946 | [Hugging Face](https://huggingface.co/pyf98/DPHuBERT/blob/main/DPHuBERT-sp0.75.pth) |
+| DPWavLM | WavLM Base+ | 0.75 | 23,586,325 | [Hugging Face](https://huggingface.co/pyf98/DPHuBERT/blob/main/DPWavLM-sp0.75.pth) |
 
 
 
