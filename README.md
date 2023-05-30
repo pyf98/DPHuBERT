@@ -2,7 +2,7 @@
 
 This repo contains the code and models for our paper: 
 
-Yifan Peng, Yui Sudo, Shakeel Muhammad, and Shinji Watanabe, “DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models,” in Proc. INTERSPEECH, 2023. (to appear)
+Yifan Peng, Yui Sudo, Shakeel Muhammad, and Shinji Watanabe, “[DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models](https://arxiv.org/abs/2305.17651),” in Proc. INTERSPEECH, 2023. (to appear)
 
 
 ## Overview
