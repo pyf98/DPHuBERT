@@ -13,13 +13,21 @@ The training procedure is illustrated in the figure below:
 
 ![Training procedure of DPHuBERT](imgs/dphubert-train.png)
 
+---
+
 The main results are summarized in this table:
 
 ![DPHuBERT results](imgs/dphubert-results.png)
 
-Our models are also shown in the [SUPERB leaderboard](https://superbbenchmark.org/leaderboard). Here is a screenshot.
+---
 
-![SUPERB](imgs/dphubert-superb.png)
+Our models are also shown in the [SUPERB leaderboard](https://superbbenchmark.org/leaderboard). Here are the results sorted by Rank and Score, respectively.
+
+![SUPERB sorted by Rank](imgs/dphubert-superb.png)
+
+---
+
+![SUPERB sorted by Score](imgs/dphubert-superb-score.png)
 
 ## Requirements
 
