@@ -17,7 +17,9 @@ The main results are summarized in this table:
 
 ![DPHuBERT results](imgs/dphubert-results.png)
 
-Our results are also shown in the [SUPERB leaderboard](https://superbbenchmark.org/leaderboard).
+Our models are also shown in the [SUPERB leaderboard](https://superbbenchmark.org/leaderboard). Here is a screenshot.
+
+![SUPERB](imgs/dphubert-superb.png)
 
 ## Requirements
 
