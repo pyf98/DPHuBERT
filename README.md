@@ -119,11 +119,13 @@ We also provide some pre-trained models.
 Please cite our paper if you use DPHuBERT.
 
 ```
-@inproceedings{dphubert,
-    title={{DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models}},
-    author={Yifan Peng and Yui Sudo and Shakeel Muhammad and Shinji Watanabe},
-    booktitle={Proceedings of the 24th Annual Conference of the International Speech Communication Association (INTERSPEECH)},
-    year={2023},
+@inproceedings{peng23c_interspeech,
+  author={Yifan Peng and Yui Sudo and Shakeel Muhammad and Shinji Watanabe},
+  title={{DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models}},
+  year=2023,
+  booktitle={Proc. INTERSPEECH 2023},
+  pages={62--66},
+  doi={10.21437/Interspeech.2023-1213}
 }
 ```
 
