@@ -118,7 +118,7 @@ We also provide some pre-trained models.
 
 ## Citation
 
-Please cite our paper if you use DPHuBERT.
+Please cite related papers if you use DPHuBERT.
 
 ```
 @inproceedings{peng23c_interspeech,
@@ -129,8 +129,14 @@ Please cite our paper if you use DPHuBERT.
   pages={62--66},
   doi={10.21437/Interspeech.2023-1213}
 }
+@INPROCEEDINGS{10095780,
+  author={Peng, Yifan and Kim, Kwangyoun and Wu, Felix and Sridhar, Prashant and Watanabe, Shinji},
+  booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Structured Pruning of Self-Supervised Pre-Trained Models for Speech Recognition and Understanding}, 
+  year={2023},
+  pages={1-5},
+  doi={10.1109/ICASSP49357.2023.10095780}}
 ```
-
 
 ## Acknowledgments
 
