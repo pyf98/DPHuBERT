@@ -34,7 +34,7 @@ Our models are also shown in the [SUPERB leaderboard](https://superbbenchmark.or
 
 ## Requirements
 
-Our code is based on PyTorch, TorchAudio, and PyTorch Lightning. Please install these required packages from their official sources. The latest versions should work. We include our versions below for reference.
+Our code is based on PyTorch, TorchAudio, and PyTorch Lightning. Please install these required packages from their official sources. We include our versions below for reference, but other versions might also work.
 
 ```
 # Main packages for training
